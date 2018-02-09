@@ -13,12 +13,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var stepsLbl: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var timerLbl: UILabel!
     let stepsManager = StepManager.shared
     
     // class lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        stepsLbl.text = ""
         startButton.layer.cornerRadius = startButton.layer.frame.size.height / 2
         startButton.isSelected = false
     }
@@ -27,7 +29,8 @@ class ViewController: UIViewController {
         
         if sender.isSelected == false {
             buttonCustomize(button: sender, title: "Stop", color: UIColor.stopRed(), state: true)
-            stepsManager.countSteps { [weak self] (stepsCount, error) in
+            
+            stepsManager.startCounts { [weak self] (stepsCount, error) in
                 if error != nil {
                     print("not autor. error")
                 } else {
@@ -37,21 +40,10 @@ class ViewController: UIViewController {
                 }
             }
         } else {
+            stepsLbl.text = ""
             buttonCustomize(button: sender, title: "Start", color: UIColor.startVolt(), state: false)
+            stepsManager.stopCounts()
         }
-        
-        
-        //        stepsManager.countSteps { [weak self] (stepsCount, error) in
-        //            if error != nil {
-        //                print("not autor. error")
-        //            } else {
-        //                DispatchQueue.main.async {
-        //                    self?.stepsLbl.text = String(describing: stepsCount!)
-        //                }
-        //            }
-        //        }
-        
-        
         
     }
     
