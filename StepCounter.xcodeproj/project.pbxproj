@@ -12,6 +12,7 @@
 		29E118C9202DAD6100B7FAA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E118C7202DAD6100B7FAA9 /* Main.storyboard */; };
 		29E118CB202DAD6100B7FAA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E118CA202DAD6100B7FAA9 /* Assets.xcassets */; };
 		29E118CE202DAD6100B7FAA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E118CC202DAD6100B7FAA9 /* LaunchScreen.storyboard */; };
+		29E118DA202DF4C300B7FAA9 /* FitnessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		29E118CA202DAD6100B7FAA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29E118CD202DAD6100B7FAA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29E118CF202DAD6100B7FAA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				29E118C3202DAD6100B7FAA9 /* AppDelegate.swift */,
 				29E118C5202DAD6100B7FAA9 /* ViewController.swift */,
+				29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */,
 				29E118C7202DAD6100B7FAA9 /* Main.storyboard */,
 				29E118CA202DAD6100B7FAA9 /* Assets.xcassets */,
 				29E118CC202DAD6100B7FAA9 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29E118DA202DF4C300B7FAA9 /* FitnessManager.swift in Sources */,
 				29E118C6202DAD6100B7FAA9 /* ViewController.swift in Sources */,
 				29E118C4202DAD6100B7FAA9 /* AppDelegate.swift in Sources */,
 			);

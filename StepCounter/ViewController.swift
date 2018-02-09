@@ -7,19 +7,32 @@
 //
 
 import UIKit
+import CoreMotion
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var stepsLbl: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    let stepsManager = StepManager.shared
+    
+    // class lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func startPressed(_ sender: UIButton) {
+        stepsManager.countSteps { [weak self] (stepsCount, error) in
+            if error != nil {
+                print("error happened.")
+            } else {
+                DispatchQueue.main.async {
+                    self?.stepsLbl.text = String(describing: stepsCount)
+                }
+            }
+        }
+//        StepManager.countSteps()
     }
-
-
+    
 }
 
