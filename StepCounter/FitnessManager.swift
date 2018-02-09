@@ -20,10 +20,12 @@ class StepManager {
     
     func countSteps(completion: @escaping (NSNumber?, Error?) -> Void) {
         if CMPedometer.isStepCountingAvailable() {
+            print("Available")
             stepCounter.startUpdates(from: currentDateTime, withHandler: { (data, error) in
                 if error != nil {
                     completion(nil, error)
                 } else if error == nil {
+                    
                     if let steps = data?.numberOfSteps {
                         completion(steps, nil)
                     }
