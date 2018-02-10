@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2996158E202F13C10099AC98 /* libPods-StepCounter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2996158F202F13C10099AC98 /* libPods-StepCounter.a */; };
+		29961591202F24290099AC98 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29961590202F24290099AC98 /* UserInfo.swift */; };
+		29961595202F8B310099AC98 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29961594202F8B310099AC98 /* OnboardingVC.swift */; };
 		29E118C4202DAD6100B7FAA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E118C3202DAD6100B7FAA9 /* AppDelegate.swift */; };
 		29E118C6202DAD6100B7FAA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E118C5202DAD6100B7FAA9 /* ViewController.swift */; };
 		29E118C9202DAD6100B7FAA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E118C7202DAD6100B7FAA9 /* Main.storyboard */; };
 		29E118CB202DAD6100B7FAA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E118CA202DAD6100B7FAA9 /* Assets.xcassets */; };
 		29E118CE202DAD6100B7FAA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E118CC202DAD6100B7FAA9 /* LaunchScreen.storyboard */; };
 		29E118DA202DF4C300B7FAA9 /* FitnessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */; };
-		DB5BC28B2E807A767226F643 /* libPods-StepCounter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1098208029522192FE1AF04 /* libPods-StepCounter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2996158B202F13570099AC98 /* libPods-StepCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-StepCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2996158D202F13AE0099AC98 /* libPods-StepCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-StepCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2996158F202F13C10099AC98 /* libPods-StepCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-StepCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29961590202F24290099AC98 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		29961594202F8B310099AC98 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		29E118C0202DAD6100B7FAA9 /* StepCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E118C3202DAD6100B7FAA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29E118C5202DAD6100B7FAA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB5BC28B2E807A767226F643 /* libPods-StepCounter.a in Frameworks */,
+				2996158E202F13C10099AC98 /* libPods-StepCounter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +72,9 @@
 			children = (
 				29E118C3202DAD6100B7FAA9 /* AppDelegate.swift */,
 				29E118C5202DAD6100B7FAA9 /* ViewController.swift */,
+				29961594202F8B310099AC98 /* OnboardingVC.swift */,
 				29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */,
+				29961590202F24290099AC98 /* UserInfo.swift */,
 				29E118C7202DAD6100B7FAA9 /* Main.storyboard */,
 				29E118CA202DAD6100B7FAA9 /* Assets.xcassets */,
 				29E118CC202DAD6100B7FAA9 /* LaunchScreen.storyboard */,
@@ -86,6 +95,9 @@
 		CB46D2B3F68BAB4302DFFCDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2996158F202F13C10099AC98 /* libPods-StepCounter.a */,
+				2996158D202F13AE0099AC98 /* libPods-StepCounter.a */,
+				2996158B202F13570099AC98 /* libPods-StepCounter.a */,
 				A1098208029522192FE1AF04 /* libPods-StepCounter.a */,
 			);
 			name = Frameworks;
@@ -217,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29961591202F24290099AC98 /* UserInfo.swift in Sources */,
 				29E118DA202DF4C300B7FAA9 /* FitnessManager.swift in Sources */,
+				29961595202F8B310099AC98 /* OnboardingVC.swift in Sources */,
 				29E118C6202DAD6100B7FAA9 /* ViewController.swift in Sources */,
 				29E118C4202DAD6100B7FAA9 /* AppDelegate.swift in Sources */,
 			);
@@ -363,6 +377,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vpoltave.StepCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +394,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vpoltave.StepCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

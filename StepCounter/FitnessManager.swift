@@ -38,4 +38,16 @@ class StepManager {
         print("stops updates")
         stepCounter.stopUpdates()
     }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
