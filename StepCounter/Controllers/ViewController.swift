@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var stepsLbl: UILabel!
     @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var timerLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
     @IBOutlet weak var totalStepsLbl: UILabel!
+    @IBOutlet weak var accessErrorLbl: UILabel!
     
     let stepsManager = StepManager.shared
     
@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         if let name = UserDefaults.standard.value(forKey: "name") {
             welcomeLbl.text = "Welcome, \(name)!"
         }
+        if let totalSteps = UserDefaults.standard.value(forKey: "totalSteps") as? Int {
+            totalStepsLbl.text = String(describing: totalSteps)
+        }
+        accessErrorLbl.isHidden = true
         stepsLbl.text = ""
         startButton.layer.cornerRadius = startButton.layer.frame.size.height / 2
         startButton.isSelected = false
@@ -40,9 +44,14 @@ class ViewController: UIViewController {
             stepsManager.startCounts { [weak self] (stepsCount, error) in
                 if error != nil {
                     print("not autor. error")
+                    DispatchQueue.main.async {
+                        self?.accessErrorLbl.isHidden = false
+                        self?.accessErrorLbl.text = "Can't fetch your steps! Go to Setting -> StepCounter and Allow Motion & Fitness access."
+                    }
                 } else {
                     User.currentSessionSteps = stepsCount as! Int
                     DispatchQueue.main.async {
+                        self?.accessErrorLbl.isHidden = true
                         self?.stepsLbl.text = String(describing: stepsCount!)
                     }
                 }
@@ -52,10 +61,20 @@ class ViewController: UIViewController {
             buttonCustomize(button: sender, title: "Start", color: UIColor.startVolt(), state: false)
             stepsManager.stopCounts()
             User.updateSteps()
-            totalStepsLbl.text = String(describing: User.totalSteps)
-            print("Number of total steps: \(User.totalSteps)")
+            User.updateTable()
+            if let totalSteps = UserDefaults.standard.value(forKey: "totalSteps") as? Int {
+                totalStepsLbl.text = String(describing: totalSteps)
+                print("Number of total steps: \(totalSteps)")
+            }
         }
         
+    }
+    /// func for reset all daily number of steps
+    @IBAction func resetPressed(_ sender: UIButton) {
+        stepsLbl.text = ""
+        totalStepsLbl.text = "0"
+        User.totalSteps = 0
+        User.updateTable()
     }
     
     func buttonCustomize(button: UIButton, title: String, color: UIColor, state: Bool) {
