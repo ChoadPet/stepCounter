@@ -49,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2966B4EF2030F2A7005BF9FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29961590202F24290099AC98 /* UserInfo.swift */,
+				29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		29961596202F98410099AC98 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,11 +97,10 @@
 		29E118C2202DAD6100B7FAA9 /* StepCounter */ = {
 			isa = PBXGroup;
 			children = (
+				2966B4EF2030F2A7005BF9FC /* Model */,
 				29961597202F98630099AC98 /* Views */,
 				29961596202F98410099AC98 /* Controllers */,
 				29E118C3202DAD6100B7FAA9 /* AppDelegate.swift */,
-				29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */,
-				29961590202F24290099AC98 /* UserInfo.swift */,
 				29E118CA202DAD6100B7FAA9 /* Assets.xcassets */,
 				29E118CF202DAD6100B7FAA9 /* Info.plist */,
 			);
