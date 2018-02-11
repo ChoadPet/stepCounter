@@ -49,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29961596202F98410099AC98 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				29E118C5202DAD6100B7FAA9 /* ViewController.swift */,
+				29961594202F8B310099AC98 /* OnboardingVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		29961597202F98630099AC98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29E118CC202DAD6100B7FAA9 /* LaunchScreen.storyboard */,
+				29E118C7202DAD6100B7FAA9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		29E118B7202DAD6100B7FAA9 = {
 			isa = PBXGroup;
 			children = (
@@ -70,14 +88,12 @@
 		29E118C2202DAD6100B7FAA9 /* StepCounter */ = {
 			isa = PBXGroup;
 			children = (
+				29961597202F98630099AC98 /* Views */,
+				29961596202F98410099AC98 /* Controllers */,
 				29E118C3202DAD6100B7FAA9 /* AppDelegate.swift */,
-				29E118C5202DAD6100B7FAA9 /* ViewController.swift */,
-				29961594202F8B310099AC98 /* OnboardingVC.swift */,
 				29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */,
 				29961590202F24290099AC98 /* UserInfo.swift */,
-				29E118C7202DAD6100B7FAA9 /* Main.storyboard */,
 				29E118CA202DAD6100B7FAA9 /* Assets.xcassets */,
-				29E118CC202DAD6100B7FAA9 /* LaunchScreen.storyboard */,
 				29E118CF202DAD6100B7FAA9 /* Info.plist */,
 			);
 			path = StepCounter;

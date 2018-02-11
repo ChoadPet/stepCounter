@@ -11,24 +11,19 @@ import CoreMotion
 
 class ViewController: UIViewController {
     
-    let APPLICATION_ID = "28C19918-1E3D-DCC8-FF9F-EC6960A35800"
-    let API_KEY = "F25BE17E-A48A-6A87-FF08-B7AB35ABAD00"
-    let SERVER_URL = "https://api.backendless.com"
-    let backendless = Backendless.sharedInstance()!
     
     @IBOutlet weak var stepsLbl: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var timerLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
+    @IBOutlet weak var totalStepsLbl: UILabel!
     
     let stepsManager = StepManager.shared
     
-    /// class lifecycle
+    // MARK: - Viewcontroller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backendless.hostURL = SERVER_URL
-        backendless.initApp(APPLICATION_ID, apiKey: API_KEY)
         if let name = UserDefaults.standard.value(forKey: "name") {
             welcomeLbl.text = "Welcome, \(name)!"
         }
@@ -37,7 +32,7 @@ class ViewController: UIViewController {
         startButton.isSelected = false
     }
     
-    // actions
+    // MARK: - Actions
     @IBAction func startPressed(_ sender: UIButton) {
         
         if sender.isSelected == false {
@@ -46,6 +41,7 @@ class ViewController: UIViewController {
                 if error != nil {
                     print("not autor. error")
                 } else {
+                    User.currentSessionSteps = stepsCount as! Int
                     DispatchQueue.main.async {
                         self?.stepsLbl.text = String(describing: stepsCount!)
                     }
@@ -55,19 +51,23 @@ class ViewController: UIViewController {
             stepsLbl.text = ""
             buttonCustomize(button: sender, title: "Start", color: UIColor.startVolt(), state: false)
             stepsManager.stopCounts()
+            User.updateSteps()
+            totalStepsLbl.text = String(describing: User.totalSteps)
+            print("Number of total steps: \(User.totalSteps)")
         }
         
     }
     
     func buttonCustomize(button: UIButton, title: String, color: UIColor, state: Bool) {
-        button.isSelected = state
         button.setTitle(title, for: .normal)
+        button.isSelected = state
         button.backgroundColor = color
     }
     
     
 }
 
+// MARK: - Extensions
 extension UIColor {
     class func stopRed() -> UIColor {
         return UIColor(red:0.70, green:0.00, blue:0.04, alpha:1.0)
