@@ -30,12 +30,12 @@ class StepManager {
                 }
             })
         } else {
-            print("not available")
+            print("Not available!")
         }
     }
     
     func stopCounts () {
-        print("stops updates")
+        print("Stops updates")
         stepCounter.stopUpdates()
     }
     

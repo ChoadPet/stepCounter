@@ -57,9 +57,10 @@ final class User {
             let dataStore = backendless.data.ofTable("Runners")
             dataStore?.find(queryBuilder,
                             response: {
-                                (foundContacts) -> () in
-                                var foundConts = foundContacts as! [[String : Any]]
-                                updateRunnerSteps(currentUser: &foundConts[0])
+                                (foundRunners) -> () in
+                                if var runner = foundRunners as! [[String : Any]] {
+                                    updateRunnerSteps(currentUser: &runner[0])
+                                }
             },
                             error: {
                                 (fault : Fault?) -> () in
@@ -75,8 +76,8 @@ final class User {
         currentUser["numberOfSteps"] = totalSteps
         dataStore?.save(currentUser,
                         response: {
-                            (updatedContact) -> () in
-                            print("Contact saved")
+                            (updatedRunner) -> () in
+                            print("Runner saved")
         },
                         error: {
                             (fault : Fault?) -> () in

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2996158E202F13C10099AC98 /* libPods-StepCounter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2996158F202F13C10099AC98 /* libPods-StepCounter.a */; };
-		29961591202F24290099AC98 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29961590202F24290099AC98 /* UserInfo.swift */; };
+		29961591202F24290099AC98 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29961590202F24290099AC98 /* User.swift */; };
 		29961595202F8B310099AC98 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29961594202F8B310099AC98 /* OnboardingVC.swift */; };
 		29E118C4202DAD6100B7FAA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E118C3202DAD6100B7FAA9 /* AppDelegate.swift */; };
 		29E118C6202DAD6100B7FAA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E118C5202DAD6100B7FAA9 /* ViewController.swift */; };
@@ -22,7 +22,7 @@
 		2996158B202F13570099AC98 /* libPods-StepCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-StepCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2996158D202F13AE0099AC98 /* libPods-StepCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-StepCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2996158F202F13C10099AC98 /* libPods-StepCounter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-StepCounter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		29961590202F24290099AC98 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		29961590202F24290099AC98 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		29961594202F8B310099AC98 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		29E118C0202DAD6100B7FAA9 /* StepCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E118C3202DAD6100B7FAA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		2966B4EF2030F2A7005BF9FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				29961590202F24290099AC98 /* UserInfo.swift */,
+				29961590202F24290099AC98 /* User.swift */,
 				29E118D9202DF4C300B7FAA9 /* FitnessManager.swift */,
 			);
 			path = Model;
@@ -253,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29961591202F24290099AC98 /* UserInfo.swift in Sources */,
+				29961591202F24290099AC98 /* User.swift in Sources */,
 				29E118DA202DF4C300B7FAA9 /* FitnessManager.swift in Sources */,
 				29961595202F8B310099AC98 /* OnboardingVC.swift in Sources */,
 				29E118C6202DAD6100B7FAA9 /* ViewController.swift in Sources */,
